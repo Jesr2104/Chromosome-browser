@@ -1,0 +1,153 @@
+/*
+"""
+###################
+
+###################
+
+"""
+
+
+
+
+"""
+Program:    custom
+File:       custom.css
+
+Version:    V1.0
+Date:       13.05.18
+Function:   formats HTML pages. 
+
+Copyright:  (c) Oliver Roberts, Birkbeck Bioinformatics student, 2018
+Author:     Oliver Roberts
+Address:     2018 Bioinformatics Course 1st year ,University of Birkbeck, London
+            
+--------------------------------------------------------------------------
+
+Revision History:
+=================
+V1.0   10.05.18   Original   By: ORS (Oliver Roberts)
+
+
+Changelog
+v2.0 - 
+"""
+
+*/
+
+/*
+* gives a white background the page
+*/ 
+body {
+    background-color: white;
+  	margin: 0;
+  	font-family: Arial, Helvetica, sans-serif;
+
+}
+header {
+    background-color: #5c755e;
+	color: black;
+	margin: 10px;
+	padding: 20px;
+	border-radius: 5px;
+	height:90px; 
+}
+p {
+    color: black;
+	padding: 30px;
+	border: 1px black;
+}
+label {
+	color:black;
+}
+
+/*
+* this creates a wide dark topnav class for my template navigation bar
+*/ 
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+/*
+* this styles my links within the nav to go across the whole screen
+*/ 
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/*
+* this styles my links within the nav bar
+*/ 
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*
+* this changes the colour of my to black and the
+ font to white depending on ifthe cursor is hovering over it .
+*/ 
+
+.topnav a:hover {
+	background-color:#4CAF50;
+  	color: white;
+}
+/*
+*- this make the nave bar a block and prevents confusion with other lists
+*/
+
+/*
+* this creates rounded dark green sections 
+*/ 
+
+section {
+    background-color: #6FB98F;
+	color: black;
+	margin-left: 10px;
+	margin-right: 320px;
+	margin-top: 10px;
+	margin-bottom: 1-px;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+/* 
+*-This is to create floating sections which can adjust on different screen sizes 
+*/
+
+floating-box {
+    display: inline-block;
+    width: 250px;
+    height: 75px;
+    margin: 10px;
+    border-radius: 5px;  
+}
+
+/* 
+*-This is to create floating sections that appear on their own line
+*/
+
+after-box {
+    border-radius: 5px; 
+}
+/*
+* this was to create an asdie that I would use to host instructional information
+*/ 
+aside {
+    background-color: #5c755e;
+	color: black;
+	margin: 10px;
+	margin-left: 10px;
+	margin-right: 10x;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	padding: 20px;
+	border-radius: 5px;
+	float: right;
+	width: 255px;
+}

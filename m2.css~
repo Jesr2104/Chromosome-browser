@@ -1,0 +1,12 @@
+h1 { margin: 0em;
+ border: none;
+ background: black;
+ color: white;
+ font: bold 18pt Helvetica, Arial, sans-serif;
+ padding: 0.25em;
+ }
+h2 { font: bold 18pt Helvetica, Arial,
+sans-serif;}
+h3 { font: bold italic 14pt Helvetica, Arial,
+sans-serif; color: red;}
+p { font: 12pt Helvetica, Arial, sans-serif;}

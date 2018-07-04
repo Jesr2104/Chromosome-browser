@@ -1,0 +1,114 @@
+/*
+Program:    custom
+File:       custom.py
+
+Version:    V1.0
+Date:       13.05.18
+Function:   contains lists for importing into html to dynamicly generate OPTIONS in select menues
+
+Copyright:  (c) Oliver Roberts, Birkbeck Bioinformatics student, 2018
+Author:     Oliver Roberts
+Address:     2018 Bioinformatics Course 1st year ,University of Birkbeck, London
+            
+--------------------------------------------------------------------------
+
+Revision History:
+=================
+V1.0   10.05.18   Original   By: ORS (Oliver Roberts)
+
+""" 
+
+
+/*
+These are lists of data extracted from the gen banks by the middle layer  taken from html tables created by the DB layer 
+*/
+// This is for the gene preset drop down menu
+
+
+var geneList = ['101f10.1', '101f10.2', '101f10.3', '16phqg;4', '16phqg;5', '254p9.1', '327024.1', '327024.2', '334d11.1', '334d11.2', '334d11.3', '363e6.1', '363e6.2', '44m2.1', '44m2.2', '44m2.3', '551g9.1',
+				 '551g9.2', '61e3.3', '61e3.4', '625p11.1', 'a-113a6.1', 'a-113a6.2', 'a-116a10.1', 'a-116a10.2', 'a-152e5.1', 'a-152e5.11', 'a-152e5.2', 'a-152e5.3', 'a-152e5.7', 'a-152e5.8', 'a-152e5.9',
+				  'a-211c6.1', 'a-211c6.3', 'a-233a8.1', 'a-234f9.2', 'a-259h10.1', 'a-270g1.1', 'a-270g1.2', 'a-319e8.1', 'a-319e8.2', 'a-328a3.1', 'a-328a3.2', 'a-328a3.5', 'a-362g6.1', 'a-362g6.2', 'a-388d4.1',
+				   'a-418g10.1', 'a-575c2.2', 'a-575c2.4', 'a-575c2.5', 'a-589h1.1', 'a-635h12.1', 'a-635h12.2', 'a-69g12.1', 'a-735g6.1', 'a-735g6.2', 'a-735g6.3', 'a-735g6.4', 'a-761h5.1', 'a-761h5.2', 'a-761h5.6',
+				    'a-815a9.1', 'a-923a4.1', 'a-923a4.2', 'a-962b4.1', 'a-962b4.2', 'acd', 'adcy9', 'alr', 'ap-4', 'apob48r', 'arhgdig', 'axin1', 'baiap3', 'c11-rnp3', 'c16orf33', 'c16orf34', 'c16orf35', 'c16orf8',
+				     'c394h11.1', 'ca-v', 'cacna1h', 'ccdc78', 'cdh1', 'cdh11', 'ces1a1', 'ces1a2', 'cg14134', 'chtf18', 'clcn7', 'cln3', 'cox4', 'cox6ah', 'cramp1l', 'ctcf', 'ctf1', 'decr2', 'dnase1', 'dnasei', 'emp2',
+				      'fam173a', 'fbxl16', 'flj20898', 'flj23360', 'for', 'fpm315', 'freac1', 'g gamma subunit', 'galns', 'gas11', 'gene +108', 'gene x', 'gng13', 'gnptg', 'gpi1', 'gs103', 'gs114', 'gs125', 'gs129',
+				       'gs130', 'gs131', 'gs19', 'gs3', 'gs30', 'gs52', 'gs58', 'gs64', 'gs77', 'gs78', 'gs79', 'gs80', 'gs82', 'gs85', 'hagh', 'haghl', 'hba1', 'hba2', 'hbap1', 'hbd', 'hbq1', 'hbz', 'hn1l', 'hn1la',
+				        'hp', 'hpr', 'hrnbp1', 'hsd11b2', 'igfals', 'il9rps', 'irx3', 'irx5', 'irx6', 'jfp10', 'jfp11', 'jfp13', 'jfp2', 'jfp6', 'jfp7', 'jip3', 'kiaa0590', 'kiaa0665', 'kiaa0683', 'kiaa1426',
+				         'la16c-366d1.2', 'let1l', 'luc7l', 'm83', 'maat1', 'macs1', 'mapk8ip3', 'mareno', 'mecl-1', 'mefv', 'metrn', 'mmcp-7l', 'mmp20', 'mpf', 'mpfl', 'mpg', 'mrp', 'mrpl28', 'msln', 'mt1h',
+				          'mt1m', 'mt1q', 'mtg16', 'myt1', 'narfl', 'nherf-2', 'nme3', 'nme4', 'nod2', 'nop', 'nr2a', 'nthl1/nth1', 'ntn2l', 'octs3', 'olfmf2', 'pdcr', 'pdia2', 'pdip', 'phkb', 'phkg2', 'pigq',
+				           'pmm2', 'polr3k', 'ppl', 'prm1', 'prm2', 'prss21', 'rab11fip3', 'rab40c', 'rarl', 'rasl', 'rgs11', 'rhbdf1', 'rhbdl', 'rhbdl1', 'rhot2', 'rjd1', 'rjd6', 'rjd7', 'rjd9', 'rlucl',
+				            'rna polymerase ii transcription factor siii p18 subunit', 'rpusd1', 'ruvbl', 'selenoprotein x', 'slc5a2', 'slc6a10', 'socs-1', 'solh', 'sox8', 'spg7', 'stm', 'stp', 'stp1', 'stp2',
+				             'stub1', 'taif', 'tmem8', 'tmt', 'tnp2', 'tradd', 'trpa', 'tryptase like e', 'tryptaseb', 'tsc2', 'ube2i', 'ubn1', 'und313l', 'unkl', 'vps4a', 'wdr24', 'wfikkn1', 'wugsc:h_dj0991g20.1',
+				              'wwox'] ;
+
+
+// This is for the protein preset drop down menu
+var proteinList =  ['-14 gene', '-14 gene protein', '11 beta-hydroxysteroid dehydrogenase 2', '2,4-dienoyl coa reductase 2, peroxisomal', '2-4-dienoyl-coenzyme a reductase 2 peroxisomal like', 'acid-labile subunit',
+ "acyl carrier protein, mitochondrial (acp) (5'partial)", 'adenylate cyclase type 9', 'adrenocortical dysplasia', 'agouti-related protein', 'alpha globin', 'alpha-1-globin', 'alpha-2 globin chain',
+  "alpha-fetoprotein enhancer binding protein (3' partial)", 'amyloid precursor protein-binding protein 1 (app-b1)', 'annexin a2 like - ? : selenoprotein x', 'ap-4', 'apolipoprotein b48 receptor',
+   'augmenter of liver regeneration', 'axin', 'b-cell maturation protein', 'bai associated protein 3', 'bai1-associated protein 3', 'bcma peptide', 'c394h11.1 (similar to sox (sry (sex determining region y)))',
+    'c447e6.2 (insulin-like growth factor binding protein, acid labile subunit)', 'cadherin-11', 'carbonic anhydrase v', 'carbonic anhydrase vii (cah7)', 'carboxy terminus of hsp70-interacting protein',
+     'carboxylesterase hu1a', 'carboxylesterase hu1b', 'cardiotrophin-1', 'catecholamine-sulfating phenol sulfotransferase', 'cc chemokine stcp-1', 'cdc37-like gene', 'ce protein similar to dm cys3his finger protein',
+      'chromosome 16 open reading frame 33', 'chromosome 16 open reading frame 34', 'chymotrypsin-like protease ctrl-1', 'cln', 'cln3', 'cln3 protein', 'coiled-coil domain containing 78', 'creatine transporter',
+       'crm, cramped-like (drosophila)', 'ctf18, chromosome transmission fidelity factor 18 homolog (s. cerevisiae)', 'cx3c chemokine precursor', 'cytochrome c oxidase subunit iv precursor',
+        'cytochrome oxidase subunit via heart isoform precursor', 'delta globin', 'deoxyribonuclease i precursor', 'dna-3-methyladenine glycosylase', 'dna-directed rna polymerases iii 12.5 kda polypeptide', 'dnasei',
+         'e-cadherin 1', 'eif-3 p110 subunit', 'elongin b', 'epithelial membrane protein 2', 'f-box and leucine-rich repeat protein 16', 'family with sequence similarity 173, member a', 'forkhead transcription factor',
+          'fpm315', 'fragile 16d oxido reductase', 'fus/tls protein', 'g gamma subunit', 'g1 to s phase transition protein', 'gamma i-tryptase', 'gamma ii-tryptase', 'gene product with similarity to dynein beta subunit',
+           'gene product with similarity to kiaa0154', 'gene product with similarity to multidrug resistance protein mrp1', 'gene product with similarity to rat p8',
+            'gene product with similarity to ubiquitin binding enzyme', 'gene with similarity to rat kidney-specific (ks) gene', 'glutamyl trna synthetase', 'growth arrest specific 11',
+             'guanine nucleotide binding protein (g protein), gamma 13', 'h-cadherin', 'haemaglobin theta 1', 'haptoglobin', 'haptoglobin-like protein', 'hba1', 'hba2', 'hbaz', 'hbd',
+              'hematological and neurological expressed gene 1-like protein-like protein', 'hemoglobin alpha 1', 'hemoglobin alpha 1-2 hybrid', 'hemoglobin alpha 2', 'hemoglobin alpha-2', 'hemoglobin zeta',
+               'hemoglobin zeta subunit', 'heparan sulphate d-glucosaminyl 3-o-sulfotransferase-3b like', 'hepatopoietin', 'hexaribonucleotide binding protein 1 isoform beta', 'hmmcp-3-like tryptase iii', 'hn1 like',
+                'hnth1', 'homeodomain protein irxb1', 'homeodomain protein irxb2', 'homeodomain protein irxb3', 'homolog of rat b/k protein product', 'homolog of rat kidney-specific (ks) gene',
+                 'homolog of rat zymogen granule membrane protein', 'hs transmembrane tryptase; gene name tmt; af175522_1', 'hydroxyacylglutathione hydrolase', 'interleukin 4 alpha-chain precursor',
+                  'interleukin 9 receptor (il9r) pseudogene', 'jfp13', 'kiaa0220', 'kiaa0420', 'kiaa0590', 'kiaa0683', 'leukocyte function-associated molecule-1 alpha subunit', 'lrr-containing protein', 'm83',
+                   'marenostrin', 'mast cell beta ii tryptase', 'mast cell tryptase beta i', 'mast cell tryptase beta iii', 'melanoma-associated antigen recgonized by t lymphocytes ; p15', 'mesothelin',
+                    'metalloproteinase', 'metallothionein 1m', 'metallothionein 1q', 'metallothionein ih', 'metallothionein ix', 'meteorin, glial cell differentiation regulator',
+                     'microtubule-associated protein 1 light chain 3 beta (map1lc3b) pseudogene', 'middle-chain acyl-coa synthetase1', 'minus -99 protein', 'mitochondrial ribosomal protein l28',
+                      'mitogen-activated protein kinase 8 interacting protein 3', 'mtg16', 'mu-crystallin', 'multidrug resistance protein', "multiple drug resistance gene mrp1 (5' partial)", 
+                      "myosin heavy chain (mhy11) (5'partial)", 'myt1', 'n-acetylgalactosamine 6-sulfate sulfatase', 'n-acetylglucosamine-1-phosphate transferase, gamma subunit',
+                       'n-acetylglucosamyl transferase component gpi1', 'n-methylpurine-dna', 'n-methylpurine-dna glycosylase', 'na+/h+ exchanger regulatory factor 2', 'netrin-2 like protein',
+                        'nmda receptor subtype 2a gene', 'novel protein', 'novel protein containing rli and duf367 domains', 'nuclear prelamin a recognition factor-like', 'nucleolar protein nop30',
+                         'nucleoside diphosphate kinase 3', 'nucleoside diphosphate kinase : ndkm', 'olfactory receptor pseudogene', 'orip binding protein like gene product', 'p8 protein', 'paraplegin', 'periplakin',
+                          'phenol sulfotransferase', 'phenol-preferring phenol sulfotransferase 2', 'phenol-preferring phenol sulfotransferase1', 'phenol-preferring phenol sulfotransferase2', 
+                          'phosphatidylinositol glycan anchor biosynthesis, class q', 'phosphomannomutase 2', 'phosphorylase kinase', 'phosphorylase kinase gamma subunit', 'possible g-protein receptor',
+                           'possible integral membrane', 'pre-mrna splicing factor (prp16)(kiaa0224)', 'pre-pro-megakarycyte potentiating factor precursor', 'prostasin', 'protamine 1', 'protamine 2',
+                            'proteasome-like subunit mecl-1', 'protein disulfide isomerase family a, member 2', 'protein disulfide isomerase pdip precursor', "protein kinase c beta (5' partial) splice form_",
+                             "protein kinase c beta (5' partial) splice form_1", 'putative chloride channel protein 7', 'putative dna-directed rna polymerase iii c11 subunit',
+                              'putative mast cell mmcp-7-i like ii protein', 'putative mast cell mmcp-7-like ii tryptase (mmcp-7-like-2)', 'putative rna binding protein', 'putative rna-binding protein luc7-like 1',
+                               'pyrin', 'rab40c, member ras oncogene family', 'rar (ras like gtpase) like', 'ras homolog gene family, member t2', 'regulator of g protein signalling 11', 'rhbdg1',
+                                'rho gdp dissociation inhibitor (gdi) gamma', 'rho gdp-dissociation inhibitor (gdi) gamma', 'rho gdp-dissociation inhibitor gamma', 'rhomboid 5 homolog 1 (drosophila)',
+                                 'rhomboid related protein', 'rhomboid, veinlet-like 1 (drosophila)', 'ribosomal large subunit pseudouridine synthase c like', 'ribosomal protein l23a (rpl23a) pseudogene',
+                                  'rna polymerase ii subunit hrpb33', 'rna polymerase iii subunit cii', 'rna pseudouridylate synthase domain containing 1', 'rps3a (40s ribosomal protein s3a) pseudogene', 'sa gene',
+                                   'seven transmembrane helix receptor', 'similar to ak001902', 'similar to c. elegans protein f17c8.5', 'similar to fban0003337', 'similar to fban0007609', 'similar to hagh',
+                                    'similar to kinesin-like dna binding protein (kid)', 'similar to portion of neuronal pentraxin i precursor npx1 or np1', 'similar to pre-pro-megakarycyte potentiating factor precursor',
+                                     'similar to protein kinase c substrate', 'similar to sperm specifc protein', 'similar to und313 (s. cervisiae)', 'small optic lobes homolog', 'small optic lobes homolog (drosophila)',
+                                      'sodium/glucose cotransporter', 'some homology with holliday junction dna helicase ruvb like', 'sry (sex determining region y)-box 8', 'stip1 homology and u-box containing protein 1',
+                                       'suppressor of cytokine signalling protein', 't cell-directed cc chemokine', 'testisin', 'thermolabile phenol sulfotransferase', 'theta globin', 'transcriptional repressor ctcf',
+                                        'transition protein 2', 'translation initiation factor eif-p110', 'transmembrane protein 8 (five membrane-spanning domains)', 'transmembrane tryptase', 'tryptase alpha ii',
+                                         'ts pst1', 'tuberin', 'tumor necrosis factor alpha-inducing factor alpha isoform', 'tumor necrosis factor receptor 1-associated death domain protein',
+                                          'u11/u12 snrnp 25 kda protein', 'ubinuclein', 'ubiquitin conjugating enzyme e2', 'unknown', 'unknown function', 'unknown gene product', 'unknown gene product (partial)',
+                                           'unknown protein', 'unknown protein product cit987sk-a-589h1_1 splice form 1', 'unknown protein product cit987sk-a-589h1_1 splice form 2', 'vacuolar protein sorting factor 4a',
+                                            'voltage dependent t-type calcium channel alpha-1h subunit', 'wap, follistatin/kazal, immunoglobulin, kunitz and netrin domain containing 1', 'wd repeat domain 24',
+                                             'weakly similar to orf ynl240c [s.cerevisiae]', 'ww domain-containing oxidoreductase isoform forii', 'ww domain-containing oxidoreductase isoform foriii', 'zeta-globin 1',
+                                              'zona pellucida zp2'];
+
+
+// This is for the accession drop down menu
+var accessionList = ['ab001103', 'ab013286', 'ab014460', 'ab062503', 'ab065569', 'ab065570', 'ab065909', 'ab119997', 'ab119998', 'ae006462', 'ae006463', 'ae006464', 'ae006465', 'ae006466', 'ae006467', 'ae006639',
+ 'ae006640', 'af001548', 'af001549', 'af001550', 'af017115', 'af022853', 'af041004', 'af050078', 'af058301', 'af060370', 'af064598', 'af069074', 'af071213', 'af080237', 'af080525', 'af085343', 'af098327', 'af098328',
+  'af099143', 'af099144', 'af099146', 'af108459', 'af109120', 'af111163', 'af126531', 'af141333', 'af145477', 'af146394', 'af157796', 'af175759', 'af183892', 'af191031', 'af192554', 'af195508', 'af282903', 'af307340',
+   'af314194', 'af318074', 'af325429', 'af325432', 'af348671', 'af350250', 'af443868', 'af525460', 'af536204', 'ah009490', 'aj003147', 'aj238317', 'aj303140', 'al022341', 'al023881', 'al031009', 'al031033', 'al031258',
+    'al031705', 'al031708', 'al031709', 'al031717', 'al031724', 'al049542', 'ab281136', 'ab281137', 'ab281701', 'ac002044', 'ac002045', 'ac002299', 'ac002301', 'ac002310', 'ac002394', 'ac002400', 'ac002425', 'ac002544',
+     'ac002550', 'ac003003', 'ac003007', 'ac003034', 'ac003108', 'ac004020', 'ac004125', 'ac004131', 'ac004232', 'ac004233', 'ac004381', 'ac004382', 'ac004493', 'ac004525', 'ac004638', 'ac004653', 'ac004682', 'ac004685',
+      'ac004943', 'ay028959', 'ay057060', 'ay323831', 'ay335942', 'ay335944', 'ay335946', 'ay495334', 'ay971883', 'ay995114', 'd17629', 'd83195', 'dq431198', 'dq499017', 'dq499018', 'ac005203', 'ac005600', 'gu145033',
+       'gu371438', 'hq156224', 'j00153', 'j00182', 'm69197', 'u15422', 'u20499', 'u25134', 'u27317', 'u33446', 'u34804', 'u37686', 'u41163', 'u43033', 'u52852', 'u54701', 'u66875', 'u71086', 'u72202', 'u76619', 'u86758',
+        'u91318', 'u91321', 'u91326', 'u95737', 'u95740', 'u95742', 'x64834', 'x65607', 'x71874', 'x84909', 'x99832', 'y11950', 'z29574', 'z46940', 'z69667', 'z69719', 'z69720', 'z84479', 'z84721', 'z84722', 'z92544',
+         'z97634', 'z97653', 'z97986', 'z98258', 'z98883', 'z99757'] ;
+
+
+
+// This is for the location drop down menu
+var locationList = ['#16q23', '+16p11.2', '+16p13.1-12, 16q23', '16', '16p', '16p11', '16p11.1-p11.2', '16p11.2', '16p11.2-12', '16p12', '16p12-p11', '16p12-p13.1', '16p12.1', '16p12.1-p11.2', '16p12.3', '16p13.1',
+ '16p13.1, 2q11.2', '16p13.1-12', '16p13.11', '16p13.13-p13.2', '16p13.2', '16p13.3', '16p13.3; between d16s510 and d16s509', '16q', '16q-16p', '16q12-13', '16q12.2', '16q13', '16q13-q22.1', '16q13/21', '16q21-q23',
+  '16q22', '16q22-q24', '16q22.1', '16q22.1; between cy130(d) and cy4', '16q22.2', '16q23.2', '16q23.3', '16q24', '16q24.3', 'between d16s510 and d16s509', 'p11.2-p12.1', 'p12.1', 'p13.1', 'p13.3', 'q12-q13', 'q13'] ;

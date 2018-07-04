@@ -1,0 +1,130 @@
+import pymysql.cursors
+import re
+
+
+def db_content(general_or_accession):
+
+    if general_or_accession == "general":
+        query = "select c.gene_name, c.product_name, c.product_id, a.accession_num, l.chr_location from locus l, cds c, accession a where a.locus_id=l.id and c.locus_id=l.id and a.latest_version='T'"
+        db = pymysql.connect(db='chr_db', user='root', passwd='G00dluck135!', host='localhost', port=3306, cursorclass = pymysql.cursors.DictCursor)
+        cursor = db.cursor()
+        q = cursor.execute(query)
+        data = cursor.fetchall()
+
+        output = []
+        for i in data:
+            output.append(i)
+
+        return(output)
+
+    if general_or_accession == "accession":
+        query = "select a.accession_num, l.locus_name from locus l, accession a where a.locus_id=l.id"
+        db = pymysql.connect(db='chr_db', user='root', passwd='G00dluck135!', host='localhost', port=3306, cursorclass = pymysql.cursors.DictCursor)
+        cursor = db.cursor()
+        q = cursor.execute(query)
+        data = cursor.fetchall()
+
+        output = []
+        for i in data:
+            output.append(i)
+
+        return(output)
+
+
+
+
+def count_cases(webpage_input, db_content_info):
+
+    search = webpage_input["name"]
+    search_type = webpage_input["type"]
+    counter = 0
+    for i in db_content_info:
+        if search_type==0:
+            if i["gene_name"]== search:
+                counter += 1
+            else:
+                pass
+        
+        if search_type==1:
+            if i["product_name"]== search:
+                counter += 1
+            else:
+                pass
+
+        if search_type==2:
+            if i["accession_num"]== search:
+                counter += 1
+            else:
+                pass
+
+        if search_type==3:
+            location = i["chr_location"]
+            match = re.search(re.escape(search), location)
+            if match:
+                counter += 1
+            else:
+                pass
+
+    return(counter)
+
+
+
+
+def checker(webpage_input):
+
+    search_type = webpage_input["type"]
+    search = webpage_input["name"]
+    preset = webpage_input["pre_set"]
+    enzyme = webpage_input["enzyme"]
+
+    output = {}
+    duplicates = []
+    case_count = int()
+    
+    if search_type==0 or search_type==1 or search_type==3:
+        data = db_content("general")
+        case_count = count_cases(webpage_input, data)
+
+    elif search_type==2:
+        data = db_content("accession")
+        case_count = count_cases(webpage_input, data)
+
+    if case_count==0:
+        output["type"] = int(5)
+        output["pre_set"] = preset
+        output["name"] = search
+        output["enzyme"] = enzyme
+        return(output)
+
+    elif case_count==1:
+        output["type"] = search_type
+        output["pre_set"] = preset
+        output["name"] = search
+        output["enzyme"] = enzyme
+        return(output)
+
+    elif int(case_count) > 1:
+        if search_type==0 or search_type==1 or search_type==2:
+            output["type"] = int(4)
+            output["pre_set"] = preset
+            output["name"] = search
+            output["enzyme"] = enzyme
+            for i in data:
+                if search in i.values():
+                    new_dict = output.copy()
+                    new_dict.update(i)
+                    duplicates.append(new_dict)
+            return(duplicates)
+            
+        elif search_type==3:
+            output["type"] = search_type
+            output["pre_set"] = preset
+            output["name"] = search
+            output["enzyme"] = enzyme
+            return(output)
+
+                
+
+ 
+
+    

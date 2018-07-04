@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type"text/css" href="/cgi-bin/css/custom.css">
+    <script type="text/javascript" src="/cgi-bin/js/custom.js" ></script>
+    <title>Group 6 webpage</title>
+  </head>
+  <body>
+
+
+    <header>
+      <h1> Group 6 BBK bioinformatics</h1>
+    </header>
+
+    <nav class="topnav">
+      <nav class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  <!-- Navbar content -->
+        <a href = "http://student.cryst.bbk.ac.uk/~ro001/index.html">Home</a> |
+        <a href = "http://student.cryst.bbk.ac.uk/~ro001/results.html">Results</a> |
+        <a href = "http://student.cryst.bbk.ac.uk/~ro001/about.html">About</a> 
+      </nav>
+    </nav>
+
+          <!-- 
+  -givens a hidden value declaring wether it is the user input form (1st form) or the preset form(2nd form)
+  -->
+
+    <section class="container">
+    <section class="row">
+    <section class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+      <fieldset> 
+        <form action="http://student.cryst.bbk.ac.uk/cgi-bin/cgiwrap/ro001/front_module.py" method="GET">
+          <input type="hidden" name="pre_set" value="False">
+          <br>
+
+          <legend>Input your search information</legend>
+          <label>Enter your search term</label>
+          <input type="text" name="name" list="names_list">
+          <datalist id="names_list">
+          </datalist>
+          <br>
+
+          <input type="radio" name="type" value=0> Gene<br>
+          <input type="radio" name="type" value=1> Protein ID<br>
+          <input type="radio" name="type" value=2> Genbank accession number<br>
+          <input type="radio" name="type" value=3> Cytogenetic location<br>
+          <br>
+
+          <legend>Enzymes</legend>
+          <label> Select if you wish to search for a particular restriction site </label>           
+          <input type="radio" name="enzyme" value="" checked="checked">None<br>
+          <input type="radio" name="enzyme" value="ecori"> EcoRI<br>
+          <input type="radio" name="enzyme" value="bamhi"> BamHI<br>
+          <input type="radio" name="enzyme" value="bsumi"> BsuMI<br>
+          <input type="submit" name="submit">
+          <br>
+
+        </form>
+      </fieldset>
+    </section>
+    </section>
+    </section>
+    <br/>
+
+  	<!-- -->  
+
+  <!-- this is an example of the lists the datalist that i will use for each type -->
+
+    <!-- 
+    -givens a hidden value declaring wether it is the user input form (1st form) or the preset form(2nd form)
+    -->
+    <!-- This is to declare which enzyme type on the Auto fill lists  -->
+    <section class="container">
+    <section class="row">
+    <section class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+      <fieldset> 
+	<form action="http://student.cryst.bbk.ac.uk/cgi-bin/cgiwrap/ro001/front_module.py" 	    method="GET">
+          <input type="hidden" name="pre_set" value="True">
+
+          <legend>Gene</legend>
+          <label> Enter your Gene name </label>
+          <br>
+          <select id = "geneSelect" name = "gene">
+            <option label=""></option>
+          </select>
+          <br>
+
+          <legend>Protein</legend>
+          <label> Enter your protein name </label>
+          <br>
+          <select id = "proteinSelect" name = "protein">
+            <option label=""></option> 
+          </select>
+          <br>
+
+          <legend>Accesion</legend>
+          <label> Enter your Accession number </label>
+          <br>
+          <select id = accessionSelect name = "accessionSelect">
+            <option label=""></option> 
+          </select>
+          <br>
+
+          <legend>cytogenetic location</legend>
+          <label> Enter your cytogenic location </label>
+          <br>
+          <select id = "locationSelect" name = "location">
+            <option label=""></option> 
+          </select>
+          <br>
+
+          <legend>Enzymes</legend>
+          <label> Select if you wish to search for a particular restriction site </label>
+          <br>
+          <input type="radio" name="enzyme" value="" checked="checked">None<br>           
+          <input type="radio" name="enzyme" value="ecori"> EcoRI<br>
+          <input type="radio" name="enzyme" value="bamhi"> BamHI<br>
+          <input type="radio" name="enzyme" value="bsumi"> BsuMI<br>
+          <input type="submit" value="Submit">
+
+        </form>
+      </fieldset>
+    </section>
+    </section>
+    </section>
+
+    <!-- 
+    I would like this to disable the second submit form if more than one select has a value = True 
+    e.g. an option selected 
+    -->   
+
+
+    <footer>
+      <p> This was creted by Alina, Elena and Oliver </p>
+    </footer>
+
+<!-- this calls js/custom.js which conts the arrays I will use to poulate the select Options-->
+
+  <script type="text/javascript" src="/cgi-bin/js/custom.js" ></script>
+
+  <script type="text/javascript">
+    // geneList is alredy defined in the js/custom.js file
+    select = document.getElementById('geneSelect');
+
+for (var i =0; i<=geneList.length; i++){
+    var opt = document.createElement('option');
+    opt.value = geneList[i];
+    opt.innerHTML = geneList[i];
+    select.appendChild(opt);
+}
+</script>
+
+
+ <script type="text/javascript">
+    // proteinListis alredy defined in the js/custom.js file
+    select = document.getElementById('proteinSelect');
+
+for (var i =0; i<=proteinList.length; i++){
+    var opt = document.createElement('option');
+    opt.value = proteinList[i];
+    opt.innerHTML = proteinList[i];
+    select.appendChild(opt);
+}
+</script>    
+
+ <script type="text/javascript">
+     // accesionList is alredy defined in the js/custom.js file
+    select = document.getElementById('accessionSelect');
+
+for (var i =0; i<=accessionList.length; i++){
+    var opt = document.createElement('option');
+    opt.value = accessionList[i];
+    opt.innerHTML = accessionList[i];
+    select.appendChild(opt);
+}
+</script>
+
+<script>
+     // locationList is alredy defined in the js/custom.js file
+    select = document.getElementById('locationSelect');
+
+for (var i =0; i<=locationList.length; i++){
+    var opt = document.createElement('option');
+    opt.value = locationList[i];
+    opt.innerHTML = locationList[i];
+    select.appendChild(opt);
+}
+</script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
