@@ -24,5 +24,5 @@ The Chromosome-Browser project is a collaboration between IT and bioinformatics 
 - Jorge Eliecer Soto Ramos (IT Supervisor)
 
 ## Acknowledgements
-- We would like to thank the XYZ Research Institute for providing access to the original genetic data used in this project.
-- Special thanks to Dr. Jane Smith for her valuable input and guidance throughout the development of the project.
+- We would like to thank the [Miss-name] Research Institute for providing access to the original genetic data used in this project.
+- Special thanks to [Miss-name] for [his/her] valuable input and guidance throughout the development of the project.
