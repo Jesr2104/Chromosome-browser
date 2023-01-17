@@ -8,7 +8,7 @@ The Chromosome-Browser project is a collaboration between IT and bioinformatics 
 
 2. A backend made in Python that requests data from the original database, selects useful information for the project, and passes it to the prepared MySQL database. This layer is also responsible for maintaining the data in the database and returning it to the third part of the project.
 
-3. A basic web interface written in HTML and minimal CSS that serves as a search engine. Users can collect data and parameters to perform queries on the database using the selected parameters.
+3. A basic web interface written in HTML and minimal CSS, and all the JavaScript necessary to create user interaction and dynamism on the web, serves as a search engine. Users can collect data and parameters to perform queries on the database using the selected parameters and the tools provided in the interface.
 
 | Technology  | Description |
 | ------------- | ------------- |
@@ -16,6 +16,7 @@ The Chromosome-Browser project is a collaboration between IT and bioinformatics 
 | Python  | Backend programming language used to request and process data from the original database and maintain data in the MySQL database |
 | HTML  | Markup language used to create the basic structure of the web interface  |
 | CSS  | Style sheet language used to add minimal design elements to the web interface |
+| JavaScript | Scripting language used to create interactivity and dynamic behavior on the web interface|
 
 ## Authors
 - John Doe (Project Manager)
