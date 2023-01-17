@@ -1,4 +1,4 @@
-# Chromosome-Browser
+# Chromosome-Browser :microscope:
 A bioinformatics project that allows for the search for genetic information in a human chromosome.
 
 ## Description
@@ -10,13 +10,13 @@ The Chromosome-Browser project is a collaboration between IT and bioinformatics 
 
 3. A basic web interface written in HTML and minimal CSS, and all the JavaScript necessary to create user interaction and dynamism on the web, serves as a search engine. Users can collect data and parameters to perform queries on the database using the selected parameters and the tools provided in the interface.
 
-| Technology  | Description |
-| ------------- | ------------- |
-| MySQL  | Database management system used to store and retrieve genetic information  |
-| Python  | Backend programming language used to request and process data from the original database and maintain data in the MySQL database |
-| HTML  | Markup language used to create the basic structure of the web interface  |
-| CSS  | Style sheet language used to add minimal design elements to the web interface |
-| JavaScript | Scripting language used to create interactivity and dynamic behavior on the web interface|
+| Technology      | Description |
+| ------------------- | ------------------- |
+| :computer: MySQL  | Database management system used to store and retrieve genetic information  |
+| :snake: Python  | Backend programming language used to request and process data from the original database and maintain data in the MySQL database |
+| :file_cabinet: HTML  | Markup language used to create the basic structure of the web interface  |
+| :art: CSS  | Style sheet language used to add minimal design elements to the web interface |
+| :coffee: JavaScript | Scripting language used to create interactivity and dynamic behavior on the web interface|
 
 ## Authors
 - John Doe (Project Manager)
