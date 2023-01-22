@@ -1,5 +1,6 @@
 # Chromosome-Browser :microscope:
-A bioinformatics project that allows for the search for genetic information in a human chromosome.
+
+A bioinformatics project: it allows the user to navigate through all genetic information within a specific human chromosome.
 
 ## Description
 The Chromosome-Browser project is a collaboration between IT and bioinformatics professionals to create a tool that allows for easy searching of genetic information in a human chromosome. The project consists of 3 essential parts:
@@ -19,10 +20,11 @@ The Chromosome-Browser project is a collaboration between IT and bioinformatics 
 | JavaScript | :small_blue_diamond:Scripting language used to create interactivity and dynamic behavior on the web interface |
 
 ## Authors
-- John Doe (Project Manager)
-- Elena alvarez Ortega [GitHub @Elena](https://github.com/ealvar03) (Bioinformatics Lead)
+- Alina Kennedy (Assistant)
+- Oliver Scott (Assistant)
+- Elena Alvarez Ortega [GitHub @Elena](https://github.com/ealvar03) (Bioinformatics Lead)
 - Jorge Eliecer Soto Ramos (IT Supervisor)
 
 ## Acknowledgements
-- We would like to thank the [Miss-name] Research Institute for providing access to the original genetic data used in this project.
-- Special thanks to [Miss-name] for [his/her] valuable input and guidance throughout the development of the project.
+- We would like to thank the Birkbeck College Research Institute for providing access to the original genetic data used in this project.
+- Special thanks to Andrew Coleman for his valuable input and guidance throughout the development of the project.
